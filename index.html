@@ -1,0 +1,71 @@
+<!--
+    Random Password Generator
+    Created by https://github.com/ChikuX
+    Date: 12-12-2024
+
+    Project Description:
+    This project is a responsive and interactive Random Password Generator. It allows users to generate a random password 
+    based on selected options (Alphabets, Numbers, Symbols) and copy the password to the clipboard with a simple click. 
+    The project combines HTML, TailwindCSS for styling, and JavaScript for interactivity.
+
+    Features:
+    - Generate a password of fixed length (12 characters).
+    - Options to include alphabets, numbers, and symbols.
+    - Copy functionality with user feedback for successful actions.
+    - Responsive design using TailwindCSS.
+
+    License:
+    This code is © Chiku, 2024. All rights reserved.
+    Redistribution or use of this code in any form must include proper attribution to the original author. 
+    Commercial use requires explicit permission from the author.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<body class="p-0 m-0 h-[100vh] w-full grid place-content-center justify-items-center place-items-center text-white bg-blue-400">
+    <div class="bg-slate-400 h-[95vh] w-[97vw] rounded-2xl flex justify-center items-center">
+        <div class="bg-slate-600 h-[18rem] w-[25rem] rounded-xl border-b-black p-2 text-center">
+            <h1 class="font-extrabold font-serif mt-1 select-none cursor-default">
+                Random Password Generator
+            </h1>
+            <div class="h-fit flex justify-center items-center flex-col border-black border-2 m-5 rounded-xl">
+                <div class="p-2 h-[4rem] border border-black w-[95%] mt-2 rounded-t-xl rounded-b-md flex justify-center items-center">
+                    <code id="pass-gen" class="select-none"></code>
+                </div>
+                <div class="mt-1 mb-2 rounded-b-xl rounded-t-md p-2 w-[95%] h-fit border-black border cursor-pointer active:scale-95 hover:bg-gray-500 hover:border-green-300 transition duration-200 ease-in-out" id="copy-item">
+                    <h2 class="font-semibold font-sans select-none">
+                        Copy
+                    </h2>
+                </div>
+            </div>
+            <div class="flex justify-center items-center m-2 select-none">
+                <div class="px-2 cursor-pointer select-none">
+                    <input type="checkbox" name="Alphabet" id="alphabets" class="cursor-pointer">
+                    <label for="alphabets" class="cursor-pointer select-none">Alphabets</label>
+                </div>
+                <div class="px-2 cursor-pointer select-none">
+                    <input type="checkbox" name="Numbers" id="numbers" class="cursor-pointer">
+                    <label for="numbers" class="cursor-pointer select-none">Numbers</label>
+                </div>
+                <div class="px-2 cursor-pointer select-none">
+                    <input type="checkbox" name="Symbols" id="symbols" class="cursor-pointer">
+                    <label for="symbols" class="cursor-pointer select-none">Symbols</label>
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <div class="h-fit w-[90%] p-2 font-bold rounded-3xl bg-green-600 cursor-pointer text-black select-none active:scale-95 hover:bg-green-500 transition duration-200 ease-in-out" id="generate-button">
+                    Generate
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
